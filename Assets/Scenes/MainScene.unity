@@ -1395,7 +1395,6 @@ GameObject:
   - component: {fileID: 997602617}
   - component: {fileID: 997602616}
   - component: {fileID: 997602615}
-  - component: {fileID: 997602618}
   m_Layer: 0
   m_Name: CloseOptionsButton
   m_TagString: Untagged
@@ -1517,18 +1516,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 997602613}
   m_CullTransparentMesh: 1
---- !u!114 &997602618
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 997602613}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d4f26b7b50654c04ba9ced78843744c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1025001800
 GameObject:
   m_ObjectHideFlags: 0
@@ -2748,8 +2735,8 @@ MonoBehaviour:
   m_parseCtrlCharacters: 1
   m_isOrthographic: 1
   m_isCullingEnabled: 0
-  m_horizontalMapping: 3
-  m_verticalMapping: 3
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
   m_uvLineOffset: 0
   m_geometrySortingOrder: 0
   m_IsTextObjectScaleStatic: 0
