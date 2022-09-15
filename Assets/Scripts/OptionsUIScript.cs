@@ -13,7 +13,7 @@ public class OptionsUIScript : MonoBehaviour
     [SerializeField]
     private Canvas alternativeTopUI;
     private List<Button> optionsButtons;//<<< list of the buttons children of the optionsUI canvas
-    private Animator animator;
+    private Animator animator;//<<< animator component to launch the scroll animations
     private bool changingLanguage = false;//<<< avoids having several coroutines launched if the button is spammed
 
     // Start is called before the first frame update
@@ -28,6 +28,8 @@ public class OptionsUIScript : MonoBehaviour
 
     //----------------------------------------------------------------
     //children management functions
+
+    //returns a list of the children of a gameobject (the transofrm of it must be given)
     private List<Transform> GetChildren(Transform parent)
     {
         List<Transform> children = new List<Transform>();
@@ -41,6 +43,7 @@ public class OptionsUIScript : MonoBehaviour
         return children;
     }
 
+    //extracts the list of buttons from a list of children
     private List<Button> GetChildrenButtons(List<Transform> children)
     {
         List<Button> childrenButtons = new List<Button>();
@@ -58,6 +61,7 @@ public class OptionsUIScript : MonoBehaviour
         return childrenButtons;
     }
 
+    //simple loop to set the list of buttons active or not
     private void SetChildrenButtonsActive(bool isActive)
     {
         foreach(Button button in this.optionsButtons)

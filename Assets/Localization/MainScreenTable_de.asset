@@ -22,6 +22,10 @@ MonoBehaviour:
     m_Localized: Poster gefunden!
     m_Metadata:
       m_Items: []
+  - m_Id: 306545468882944
+    m_Localized: Los geht's!
+    m_Metadata:
+      m_Items: []
   references:
     version: 2
     RefIds: []

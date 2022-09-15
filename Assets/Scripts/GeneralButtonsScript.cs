@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ButtonsScript : MonoBehaviour
+public class GeneralButtonsScript : MonoBehaviour
 {
     //---------------------------------------------------------------------
     //Functions for scene management

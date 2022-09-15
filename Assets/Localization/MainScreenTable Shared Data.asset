@@ -19,6 +19,10 @@ MonoBehaviour:
     m_Key: detection_text
     m_Metadata:
       m_Items: []
+  - m_Id: 306545468882944
+    m_Key: next_button_text
+    m_Metadata:
+      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
