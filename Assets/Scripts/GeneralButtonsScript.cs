@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GeneralButtonsScript : MonoBehaviour
 {
+    public string detectedPosterScene;
     //---------------------------------------------------------------------
     //Functions for scene management
 
@@ -23,6 +24,12 @@ public class GeneralButtonsScript : MonoBehaviour
     public void ChangeScene(string scene)
     {
         StartCoroutine(LoadScene(scene));
+    }
+
+    public void ChangeSceneToPoster()
+    {
+        if (detectedPosterScene == null) return;
+        StartCoroutine(LoadScene(detectedPosterScene));
     }
     //-------------------------------------------------------------------------
 
