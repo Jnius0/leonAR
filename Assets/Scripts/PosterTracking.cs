@@ -5,6 +5,7 @@ using UnityEngine.XR;
 using UnityEngine.XR.ARFoundation;
 using UnityEngine.XR.ARSubsystems;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 [RequireComponent(typeof(ARTrackedImageManager))]
 public class PosterTracking : MonoBehaviour
@@ -25,8 +26,10 @@ public class PosterTracking : MonoBehaviour
     [Header("button handling script to give the scene names to.")]
     [SerializeField]
     private GeneralButtonsScript buttonsScript;
+    [Header("Poster detection text.")]
+    [SerializeField]
+    private TextMeshProUGUI text;
 
-    
 
     private Dictionary<string, GameObject> spawnedPrefabs = new Dictionary<string, GameObject>(); //<<< dictionnary to link the different images and prefabs by their names
     private ARTrackedImageManager trackedImageManager; //<<< manager to detect 2D images
@@ -36,6 +39,7 @@ public class PosterTracking : MonoBehaviour
         //initialize the manager
         trackedImageManager = FindObjectOfType<ARTrackedImageManager>();
         detectionUI.SetActive(false);
+        text.enabled = false;
     }
 
     //add the ImageChanged function to the trackedImagesChanges event of the manager to add our functionalities
@@ -62,19 +66,33 @@ public class PosterTracking : MonoBehaviour
         }
         foreach (ARTrackedImage trackedImage in eventArgs.removed)
         {
-            detectionUI.SetActive(false);
-            buttonsScript.detectedPosterScene = "";
+            LoseTracking();
         }
     }
 
     //updates the positions and rotations of prefabs depending on the given detected image
     private void UpdateImage(ARTrackedImage trackedImage)
     {
+        if (trackedImage.trackingState != TrackingState.Tracking)
+        {
+            LoseTracking();
+            return;
+        }
+
         //link between the tracked image in parameters and the prefabs is made thanks to their name
         string name = trackedImage.referenceImage.name;
         string scene = scenes[name];
 
         buttonsScript.detectedPosterScene = scene;
         detectionUI.SetActive(true);
+        text.enabled = true;
+    }
+
+    //updates all needed elements when tracking is lost
+    private void LoseTracking()
+    {
+        text.enabled = false;
+        detectionUI.SetActive(false);
+        buttonsScript.detectedPosterScene = "";
     }
 }

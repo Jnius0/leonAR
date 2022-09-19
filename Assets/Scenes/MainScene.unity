@@ -3022,10 +3022,13 @@ MonoBehaviour:
   scenes:
     m_keys:
     - poster_Montpellier_190708_1015-1
+    - IMG-1889
     m_values:
     - OpeningScene
+    - AgriPosterScene
   detectionUI: {fileID: 1055073516}
   buttonsScript: {fileID: 1101556268}
+  text: {fileID: 1533254675}
 --- !u!1 &1792810455
 GameObject:
   m_ObjectHideFlags: 0
