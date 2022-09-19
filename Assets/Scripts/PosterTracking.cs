@@ -10,16 +10,20 @@ using TMPro;
 [RequireComponent(typeof(ARTrackedImageManager))]
 public class PosterTracking : MonoBehaviour
 {
-    [Header("The length of this list must match the number of images in Reference Image Library, first string must be the name of the picture in the library, second the name of the scene to transition to.")]
+    //---------------------------------------------------------------------------------------------------------------------------------
+    //serialized dictionary handling
+    [Header("The length of this list must match the number of images in Reference Image Library, first string must be the name of the picture in the library, second the name of the scene to transition to, the third the link to the poster page on the website.")]
     [SerializeField]
-    private StringStringDictionary scenes = new StringStringDictionary(); //<<< dictionnary to map poster names to their scene 
+    TripleStringDictionary scenes = null;//<<< dictionnary to map poster names to their scene and link
 
     //using open source code from github: https://github.com/azixMcAze/Unity-SerializableDictionary
-    public IDictionary<string, string> StringStringDictionary
+    public IDictionary<string, DoubleString> TripleStringDictionary
     {
         get { return scenes; }
         set { scenes.CopyFrom(value); }
     }
+    //-------------------------------------------------------------------------------------------------------------------------------------
+
     [Header("UI to enable and disable whenever a poster is detected.")]
     [SerializeField]
     private GameObject detectionUI;
@@ -30,8 +34,6 @@ public class PosterTracking : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI text;
 
-
-    private Dictionary<string, GameObject> spawnedPrefabs = new Dictionary<string, GameObject>(); //<<< dictionnary to link the different images and prefabs by their names
     private ARTrackedImageManager trackedImageManager; //<<< manager to detect 2D images
 
     private void Awake()
@@ -81,9 +83,11 @@ public class PosterTracking : MonoBehaviour
 
         //link between the tracked image in parameters and the prefabs is made thanks to their name
         string name = trackedImage.referenceImage.name;
-        string scene = scenes[name];
+        string scene = scenes[name].scene;
+        string link = scenes[name].link;
 
         buttonsScript.detectedPosterScene = scene;
+        buttonsScript.detectedPosterLink = link;
         detectionUI.SetActive(true);
         text.enabled = true;
     }
@@ -94,5 +98,6 @@ public class PosterTracking : MonoBehaviour
         text.enabled = false;
         detectionUI.SetActive(false);
         buttonsScript.detectedPosterScene = "";
+        buttonsScript.detectedPosterLink = "";
     }
 }

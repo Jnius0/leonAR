@@ -5,7 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class GeneralButtonsScript : MonoBehaviour
 {
-    public string detectedPosterScene;
+    public string detectedPosterScene;//<<<stocks the current poster scene given by the PosterTracking script
+    public string detectedPosterLink;//<<<stocks the current poster link given by the PosterTracking script
+
     //---------------------------------------------------------------------
     //Functions for scene management
 
@@ -26,6 +28,7 @@ public class GeneralButtonsScript : MonoBehaviour
         StartCoroutine(LoadScene(scene));
     }
 
+    //similar to ChangeScene but with the detectedPosterScene public variable
     public void ChangeSceneToPoster()
     {
         if (detectedPosterScene == null) return;
@@ -38,6 +41,12 @@ public class GeneralButtonsScript : MonoBehaviour
     public void OpenLink(string link)
     {
         Application.OpenURL(link);
+    }
+
+    //similar to OpenLink but with the detectedPosterLink public variable
+    public void OpenPosterLink()
+    {
+        Application.OpenURL(detectedPosterLink);
     }
 
 

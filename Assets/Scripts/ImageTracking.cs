@@ -67,13 +67,13 @@ public class ImageTracking : MonoBehaviour
         string name = trackedImage.referenceImage.name;
         GameObject prefab = spawnedPrefabs[name];
 
-        /*if ((trackedImage.trackingState == TrackingState.None || trackedImage.trackingState == TrackingState.Limited)&&prefab.activeInHierarchy==true)
+        if (trackedImage.trackingState != TrackingState.Tracking)
         {
             prefab.SetActive(false);
             return;
-        }*/
+        }
 
-        
+
         Vector3 position = trackedImage.transform.position;
         Quaternion rotation = trackedImage.transform.rotation;
         prefab.transform.position = position;

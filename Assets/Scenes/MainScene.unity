@@ -1883,6 +1883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectedPosterScene: 
+  detectedPosterLink: 
 --- !u!1 &1354141925
 GameObject:
   m_ObjectHideFlags: 0
@@ -3024,8 +3025,10 @@ MonoBehaviour:
     - poster_Montpellier_190708_1015-1
     - IMG-1889
     m_values:
-    - OpeningScene
-    - AgriPosterScene
+    - scene: OpeningScene
+      link: https://github.com/azixMcAze/Unity-SerializableDictionary
+    - scene: AgriPosterScene
+      link: http://digitalnativestudios.com/textmeshpro/docs/ScriptReference/TextMeshPro-SetText.html
   detectionUI: {fileID: 1055073516}
   buttonsScript: {fileID: 1101556268}
   text: {fileID: 1533254675}
@@ -3577,7 +3580,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1895611671}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1101556268}
+        m_TargetAssemblyTypeName: GeneralButtonsScript, Assembly-CSharp
+        m_MethodName: OpenPosterLink
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1895611671
 MonoBehaviour:
   m_ObjectHideFlags: 0
