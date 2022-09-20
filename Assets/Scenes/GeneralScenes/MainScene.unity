@@ -3025,10 +3025,10 @@ MonoBehaviour:
     - poster_Montpellier_190708_1015-1
     - IMG-1889
     m_values:
+    - scene: DFPosterScene
+      link: https://leonar.interleo.eu
     - scene: OpeningScene
-      link: https://github.com/azixMcAze/Unity-SerializableDictionary
-    - scene: AgriPosterScene
-      link: http://digitalnativestudios.com/textmeshpro/docs/ScriptReference/TextMeshPro-SetText.html
+      link: https://leonar.interleo.eu
   detectionUI: {fileID: 1055073516}
   buttonsScript: {fileID: 1101556268}
   text: {fileID: 1533254675}
