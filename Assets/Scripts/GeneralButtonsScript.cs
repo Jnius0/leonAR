@@ -11,8 +11,8 @@ public class GeneralButtonsScript : MonoBehaviour
     //---------------------------------------------------------------------
     //Functions for scene management
 
-    //General coroutine to load any scene by its name
-    IEnumerator LoadScene(string sceneName)
+    //General coroutine to load any scene by its name, DO NOT USE BETWEEN 2 AR SCENES
+    IEnumerator LoadSceneRoutine(string sceneName)
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneName);
 
@@ -20,19 +20,32 @@ public class GeneralButtonsScript : MonoBehaviour
         {
             yield return null;
         }
+        
+    }
+
+    //AR scenes switching requires the AR session reloading, can't be done with an async coroutine
+    public void LoadARScene(string sceneName)
+    {
+        var xrManagerSettings = UnityEngine.XR.Management.XRGeneralSettings.Instance.Manager;
+        xrManagerSettings.DeinitializeLoader();
+        SceneManager.LoadScene(sceneName);
+        xrManagerSettings.InitializeLoaderSync();
     }
 
     //Launches coroutine with the give scene name in parameters
     public void ChangeScene(string scene)
     {
-        StartCoroutine(LoadScene(scene));
+        StartCoroutine(LoadSceneRoutine(scene));
     }
 
-    //similar to ChangeScene but with the detectedPosterScene public variable
+    //Launches the function to load a scene with the detectedPosterScene public variable
     public void ChangeSceneToPoster()
     {
         if (detectedPosterScene == null) return;
-        StartCoroutine(LoadScene(detectedPosterScene));
+
+        //switch between 2 AR scenes, requires the specific function
+        //StartCoroutine(LoadScene(detectedPosterScene));
+        LoadARScene(detectedPosterScene);
     }
     //-------------------------------------------------------------------------
 

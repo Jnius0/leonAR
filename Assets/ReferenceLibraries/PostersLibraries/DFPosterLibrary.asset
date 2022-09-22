@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: DFPosterLibrary
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5038595766247471364
+  m_GuidHigh: 12902776426724600455
+  m_DataStore:
+    m_Storage: []
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 5182904122392430579
+      m_GuidHigh: 1444911711820031149
+    m_SerializedTextureGuid:
+      m_GuidLow: 16074749217344090511
+      m_GuidHigh: 5415185197746456619
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: isobus
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4765375182628736599
+      m_GuidHigh: 10605572863675983504
+    m_SerializedTextureGuid:
+      m_GuidLow: 10026315714254634671
+      m_GuidHigh: 14935031557800149944
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: unis
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5744770144211701317
+      m_GuidHigh: 11922380647721296278
+    m_SerializedTextureGuid:
+      m_GuidLow: 13453546550412086769
+      m_GuidHigh: 9334281886490564651
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: sprayer
+    m_Texture: {fileID: 0}
