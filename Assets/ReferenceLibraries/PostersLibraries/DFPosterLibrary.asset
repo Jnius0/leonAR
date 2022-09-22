@@ -18,32 +18,32 @@ MonoBehaviour:
     m_Storage: []
   m_Images:
   - m_SerializedGuid:
-      m_GuidLow: 5143825247861218838
-      m_GuidHigh: 8585363893471842485
+      m_GuidLow: 5182904122392430579
+      m_GuidHigh: 1444911711820031149
     m_SerializedTextureGuid:
-      m_GuidLow: 1271404266920358573
-      m_GuidHigh: 2783199483535789752
+      m_GuidLow: 16074749217344090511
+      m_GuidHigh: 5415185197746456619
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: University links reference picture
+    m_Name: isobus
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
-      m_GuidLow: 4702732589045143257
-      m_GuidHigh: 15937859205458878622
+      m_GuidLow: 4765375182628736599
+      m_GuidHigh: 10605572863675983504
     m_SerializedTextureGuid:
-      m_GuidLow: 532809122947316923
-      m_GuidHigh: 18437255242868702331
+      m_GuidLow: 10026315714254634671
+      m_GuidHigh: 14935031557800149944
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: Sprayer tutorial reference picture
+    m_Name: unis
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
-      m_GuidLow: 5593481218988484712
-      m_GuidHigh: 10164687069581843097
+      m_GuidLow: 5744770144211701317
+      m_GuidHigh: 11922380647721296278
     m_SerializedTextureGuid:
-      m_GuidLow: 9436288268508487994
-      m_GuidHigh: 14001972430468268042
+      m_GuidLow: 13453546550412086769
+      m_GuidHigh: 9334281886490564651
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: Isobus sprayer reference picture
+    m_Name: sprayer
     m_Texture: {fileID: 0}

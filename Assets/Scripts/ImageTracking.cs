@@ -18,16 +18,11 @@ public class ImageTracking : MonoBehaviour
 
     private void Awake()
     {
-        var xrManagerSettings = UnityEngine.XR.Management.XRGeneralSettings.Instance.Manager;
-        /*xrManagerSettings.DeinitializeLoader();
-        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex); // reload current scene*/
-        //xrManagerSettings.InitializeLoaderSync();
-
         //initialize the manager
         trackedImageManager = FindObjectOfType<ARTrackedImageManager>();
 
         //instantiate the prefabs on load but disables them to prepare the scene
-        foreach(GameObject prefab in placeablePrefabs)
+        foreach (GameObject prefab in placeablePrefabs)
         {
             GameObject newPrefab = Instantiate(prefab, Vector3.zero, Quaternion.identity);
             newPrefab.name = prefab.name;
@@ -50,7 +45,7 @@ public class ImageTracking : MonoBehaviour
     //updates the display of prefabs depending on the images detected by calling the UpdateImage function
     private void ImageChanged(ARTrackedImagesChangedEventArgs eventArgs)
     {
-        foreach(ARTrackedImage trackedImage in eventArgs.added)
+        foreach (ARTrackedImage trackedImage in eventArgs.added)
         {
             UpdateImage(trackedImage);
         }
@@ -84,13 +79,5 @@ public class ImageTracking : MonoBehaviour
         prefab.transform.position = position;
         prefab.transform.rotation = rotation;
         prefab.SetActive(true);
-
-        /*foreach(GameObject go in spawnedPrefabs.Values)
-        {
-            if (go.name != name)
-            {
-                go.SetActive(false);
-            }
-        }*/
     }
 }
