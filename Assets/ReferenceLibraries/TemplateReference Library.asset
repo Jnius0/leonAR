@@ -21,9 +21,9 @@ MonoBehaviour:
       m_GuidLow: 5143825247861218838
       m_GuidHigh: 8585363893471842485
     m_SerializedTextureGuid:
-      m_GuidLow: 9436288268508487994
-      m_GuidHigh: 14001972430468268042
+      m_GuidLow: 16074749217344090511
+      m_GuidHigh: 5415185197746456619
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: EmptyUIPrefab
+    m_Name: CustomizableTextPrefab
     m_Texture: {fileID: 0}
