@@ -706,7 +706,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 392013090}
         m_TargetAssemblyTypeName: GeneralButtonsScript, Assembly-CSharp
-        m_MethodName: ChangeScene
+        m_MethodName: LoadARScene
         m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

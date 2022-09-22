@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
+  m_Name: ReferenceImageLibrary
+  m_EditorClassIdentifier: 
+  m_GuidLow: 5724671634557612157
+  m_GuidHigh: 11073354930037710748
+  m_DataStore:
+    m_Storage: []
+  m_Images:
+  - m_SerializedGuid:
+      m_GuidLow: 4823867240142862312
+      m_GuidHigh: 13765603748582769324
+    m_SerializedTextureGuid:
+      m_GuidLow: 10003802982984484930
+      m_GuidHigh: 11381573722619230778
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: tractor
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5708869127216148675
+      m_GuidHigh: 14534390716996230307
+    m_SerializedTextureGuid:
+      m_GuidLow: 16394283492339390927
+      m_GuidHigh: 15765844590135760504
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: coupure
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4945230563899738491
+      m_GuidHigh: 5635601043250728620
+    m_SerializedTextureGuid:
+      m_GuidLow: 11012640183133557452
+      m_GuidHigh: 4388127704599425112
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: VRA
+    m_Texture: {fileID: 0}

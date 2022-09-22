@@ -18,6 +18,11 @@ public class ImageTracking : MonoBehaviour
 
     private void Awake()
     {
+        var xrManagerSettings = UnityEngine.XR.Management.XRGeneralSettings.Instance.Manager;
+        /*xrManagerSettings.DeinitializeLoader();
+        UnityEngine.SceneManagement.SceneManager.LoadScene(UnityEngine.SceneManagement.SceneManager.GetActiveScene().buildIndex); // reload current scene*/
+        //xrManagerSettings.InitializeLoaderSync();
+
         //initialize the manager
         trackedImageManager = FindObjectOfType<ARTrackedImageManager>();
 
