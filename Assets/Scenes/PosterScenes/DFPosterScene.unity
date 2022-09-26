@@ -408,10 +408,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6b6e489224641242a9cbef7e79b2ee5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  placeablePrefabs:
-  - {fileID: 8422142047998156507, guid: fe9163795e52ca94e8e4b847c17f7e74, type: 3}
-  - {fileID: 3167229487711032989, guid: 9e78363fefbe8f247872f93bd806ff08, type: 3}
-  - {fileID: 8833983599952071938, guid: f1fcb3b2999bed746974108f9f78d1a1, type: 3}
+  objectsToPlace:
+    m_keys:
+    - sprayer
+    - unis
+    - isobus
+    m_values:
+    - {fileID: 8833983599952071938, guid: f1fcb3b2999bed746974108f9f78d1a1, type: 3}
+    - {fileID: 3167229487711032989, guid: 9e78363fefbe8f247872f93bd806ff08, type: 3}
+    - {fileID: 8422142047998156507, guid: fe9163795e52ca94e8e4b847c17f7e74, type: 3}
 --- !u!1 &392013089
 GameObject:
   m_ObjectHideFlags: 0

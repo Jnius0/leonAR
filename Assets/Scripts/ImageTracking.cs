@@ -9,11 +9,18 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(ARTrackedImageManager))]
 public class ImageTracking : MonoBehaviour
 {
-    [Header("The length of this list must match the number of images in Reference Image Library and the names must be identical (case sensitive!)")]
+    [Header("The length of this list must match the number of images in Reference Image Library, first string must be the name of the picture in the library, second the prefab for it.")]
     [SerializeField]
-    private GameObject[] placeablePrefabs; //<<< list of prefabs that have to be placed in the scene
+    StringGameobjectDictionary objectsToPlace = null;//<<< dictionnary to map pictures to their gameobject
 
-    private Dictionary<string, GameObject> spawnedPrefabs = new Dictionary<string, GameObject>(); //<<< dictionnary to link the different images and prefabs by their names
+    //using open source code from github: https://github.com/azixMcAze/Unity-SerializableDictionary
+    public IDictionary<string, GameObject> StringGameobjectDictionary
+    {
+        get { return objectsToPlace; }
+        set { objectsToPlace.CopyFrom(value); }
+    }
+
+    private Dictionary<string, GameObject> spawnedPrefabs = new Dictionary<string, GameObject>(); //<<< dictionnary to stock the prefabs once instantiated
     private ARTrackedImageManager trackedImageManager; //<<< manager to detect 2D images
 
     private void Awake()
@@ -22,13 +29,16 @@ public class ImageTracking : MonoBehaviour
         trackedImageManager = FindObjectOfType<ARTrackedImageManager>();
 
         //instantiate the prefabs on load but disables them to prepare the scene
-        foreach (GameObject prefab in placeablePrefabs)
+        foreach (KeyValuePair<string, GameObject> prefab in objectsToPlace)
         {
-            GameObject newPrefab = Instantiate(prefab, Vector3.zero, Quaternion.identity);
-            newPrefab.name = prefab.name;
-            spawnedPrefabs.Add(prefab.name, newPrefab);
+            GameObject newPrefab = Instantiate(prefab.Value, Vector3.zero, Quaternion.identity);
+            newPrefab.name = prefab.Key;
+            spawnedPrefabs.Add(prefab.Key.ToString(), newPrefab);
             newPrefab.SetActive(false);
         }
+
+        //clear the prefab dictionnary to free memory
+        objectsToPlace.Clear();
     }
 
     //add the ImageChanged function to the trackedImagesChanges event of the manager to add our functionalities
@@ -64,7 +74,7 @@ public class ImageTracking : MonoBehaviour
     private void UpdateImage(ARTrackedImage trackedImage)
     {
         //link between the tracked image in parameters and the prefabs is made thanks to their name
-        string name = trackedImage.referenceImage.name;
+        string name = trackedImage.referenceImage.name.ToString();
         GameObject prefab = spawnedPrefabs[name];
 
         if (trackedImage.trackingState != TrackingState.Tracking)
