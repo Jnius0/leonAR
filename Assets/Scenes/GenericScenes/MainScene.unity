@@ -2926,7 +2926,7 @@ MonoBehaviour:
     m_values:
     - scene: DFPosterScene
       link: https://leonar.interleo.eu
-    - scene: OpeningScene
+    - scene: AgriPosterScene
       link: https://leonar.interleo.eu
   detectionUI: {fileID: 1055073516}
   buttonsScript: {fileID: 1101556268}

@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 [RequireComponent(typeof(ARTrackedImageManager))]
 public class ImageTracking : MonoBehaviour
 {
-    [Header("The length of this list must match the number of images in Reference Image Library, first string must be the name of the picture in the library, second the prefab for it.")]
+    [Header("First string must be the name of the picture in the library, second the prefab for it.")]
     [SerializeField]
     StringGameobjectDictionary objectsToPlace = null;//<<< dictionnary to map pictures to their gameobject
 
@@ -66,7 +66,7 @@ public class ImageTracking : MonoBehaviour
         foreach (ARTrackedImage trackedImage in eventArgs.removed)
         {
             //spawnedPrefabs[trackedImage.name].SetActive(false);
-            Destroy(spawnedPrefabs[trackedImage.name]);
+            if (spawnedPrefabs.ContainsKey(name)) Destroy(spawnedPrefabs[trackedImage.name]);
         }
     }
 
@@ -75,6 +75,9 @@ public class ImageTracking : MonoBehaviour
     {
         //link between the tracked image in parameters and the prefabs is made thanks to their name
         string name = trackedImage.referenceImage.name.ToString();
+
+        //security test
+        if (!spawnedPrefabs.ContainsKey(name)) return;
         GameObject prefab = spawnedPrefabs[name];
 
         if (trackedImage.trackingState != TrackingState.Tracking)

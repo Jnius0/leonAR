@@ -12,7 +12,7 @@ public class PosterTracking : MonoBehaviour
 {
     //---------------------------------------------------------------------------------------------------------------------------------
     //serialized dictionary handling
-    [Header("The length of this list must match the number of images in Reference Image Library, first string must be the name of the picture in the library, second the name of the scene to transition to, the third the link to the poster page on the website.")]
+    [Header("First string must be the name of the picture in the library, second the name of the scene to transition to, the third the link to the poster page on the website.")]
     [SerializeField]
     TripleStringDictionary scenes = null;//<<< dictionnary to map poster names to their scene and link
 
@@ -83,6 +83,14 @@ public class PosterTracking : MonoBehaviour
 
         //link between the tracked image in parameters and the prefabs is made thanks to their name
         string name = trackedImage.referenceImage.name;
+
+        //security test
+        if (!scenes.ContainsKey(name))
+        {
+            LoseTracking();
+            return;
+        }
+
         string scene = scenes[name].scene;
         string link = scenes[name].link;
 

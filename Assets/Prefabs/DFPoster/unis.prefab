@@ -45,7 +45,7 @@ GameObject:
   - component: {fileID: 2260879020230780828}
   - component: {fileID: 742352006651192476}
   m_Layer: 0
-  m_Name: Square
+  m_Name: UTBM
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,7 +129,7 @@ GameObject:
   - component: {fileID: 3716733017435919365}
   - component: {fileID: 4252941379041437031}
   m_Layer: 0
-  m_Name: Square (1)
+  m_Name: TUK
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -213,7 +213,7 @@ GameObject:
   - component: {fileID: 6987891891286505160}
   - component: {fileID: 8865801774336773074}
   m_Layer: 0
-  m_Name: Square (2)
+  m_Name: SCAU
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
