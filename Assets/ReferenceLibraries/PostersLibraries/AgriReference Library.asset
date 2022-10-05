@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
-  m_Name: AgriPosterLibrary
+  m_Name: AgriReference Library
   m_EditorClassIdentifier: 
-  m_GuidLow: 4688252485435027714
-  m_GuidHigh: 8347152545243893153
+  m_GuidLow: 5651426310215939693
+  m_GuidHigh: 4795677206091997824
   m_DataStore:
     m_Storage: []
   m_Images:
   - m_SerializedGuid:
-      m_GuidLow: 5595918802542471084
-      m_GuidHigh: 1316837488014702745
+      m_GuidLow: 5244852646370715343
+      m_GuidHigh: 9908259302693883019
     m_SerializedTextureGuid:
       m_GuidLow: 789291651768343688
       m_GuidHigh: 177455590936788008

@@ -16,7 +16,7 @@ EditorBuildSettings:
     guid: 078bc8516dcb3ef4d9954253bde14123
   - enabled: 1
     path: Assets/Scenes/PosterScenes/AgriPosterScene.unity
-    guid: 262263fdbd507c449aa11779d622f2ed
+    guid: 4d766477b0f29d542affbc2cee49565f
   m_configObjects:
     Unity.XR.WindowsMR.Settings: {fileID: 11400000, guid: 744b813df90924c169af73489b8325de,
       type: 2}

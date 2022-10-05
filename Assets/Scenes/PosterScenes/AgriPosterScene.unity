@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dea56a9eaadd1c439095de4f9a371cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SerializedLibrary: {fileID: 11400000, guid: 467f8bf345736464583148c25fd105b4,
+  m_SerializedLibrary: {fileID: 11400000, guid: 1672870210d42624886590f5783257c1,
     type: 2}
   m_MaxNumberOfMovingImages: 4
   m_TrackedImagePrefab: {fileID: 0}
@@ -410,15 +410,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsToPlace:
     m_keys:
-    - isobus
-    - sprayer
-    - unis
     - sprayer2
     m_values:
-    - {fileID: 8422142047998156507, guid: fe9163795e52ca94e8e4b847c17f7e74, type: 3}
-    - {fileID: 8833983599952071938, guid: f1fcb3b2999bed746974108f9f78d1a1, type: 3}
-    - {fileID: 3167229487711032989, guid: 9e78363fefbe8f247872f93bd806ff08, type: 3}
-    - {fileID: 8833983599952071938, guid: f1fcb3b2999bed746974108f9f78d1a1, type: 3}
+    - {fileID: 8833983599952071938, guid: a0446d7484654164590d42588f161418, type: 3}
 --- !u!1 &392013089
 GameObject:
   m_ObjectHideFlags: 0
