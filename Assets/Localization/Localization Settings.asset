@@ -214,7 +214,7 @@ MonoBehaviour:
           m_TableReference:
             m_TableCollectionName: GUID:f878b3b6a4ba9ea45ac8de135d42792c
           m_TableEntryReference:
-            m_KeyId: 68824842240
+            m_KeyId: 0
             m_Key: 
           m_FallbackState: 0
           m_WaitForCompletion: 0

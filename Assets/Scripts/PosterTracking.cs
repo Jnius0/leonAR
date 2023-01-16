@@ -33,6 +33,8 @@ public class PosterTracking : MonoBehaviour
     [Header("Poster detection text.")]
     [SerializeField]
     private TextMeshProUGUI text;
+    [SerializeField]
+    private TextMeshProUGUI textAlt;
 
     private ARTrackedImageManager trackedImageManager; //<<< manager to detect 2D images
 
@@ -42,6 +44,7 @@ public class PosterTracking : MonoBehaviour
         trackedImageManager = FindObjectOfType<ARTrackedImageManager>();
         detectionUI.SetActive(false);
         text.enabled = false;
+        textAlt.enabled = true;
     }
 
     //add the ImageChanged function to the trackedImagesChanges event of the manager to add our functionalities
@@ -98,12 +101,14 @@ public class PosterTracking : MonoBehaviour
         buttonsScript.detectedPosterLink = link;
         detectionUI.SetActive(true);
         text.enabled = true;
+        textAlt.enabled = false;
     }
 
     //updates all needed elements when tracking is lost
     private void LoseTracking()
     {
         text.enabled = false;
+        textAlt.enabled = true;
         detectionUI.SetActive(false);
         buttonsScript.detectedPosterScene = "";
         buttonsScript.detectedPosterLink = "";
