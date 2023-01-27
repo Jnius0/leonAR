@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 848409ee8ba454f42a5ddff137688a27, type: 3}
-  m_Name: MusterReference Library
+  m_Name: MusterV2Reference
   m_EditorClassIdentifier: 
-  m_GuidLow: 5639388555744711795
-  m_GuidHigh: 3883275801430021561
+  m_GuidLow: 5199339835526461504
+  m_GuidHigh: 8574228245625173905
   m_DataStore:
     m_Storage: []
   m_Images:
   - m_SerializedGuid:
-      m_GuidLow: 5448157917158068831
-      m_GuidHigh: 9635603026185553557
+      m_GuidLow: 4725524727901184240
+      m_GuidHigh: 18094498843981742472
     m_SerializedTextureGuid:
       m_GuidLow: 5229833881902703646
       m_GuidHigh: 8859585186288715531
@@ -28,22 +28,22 @@ MonoBehaviour:
     m_Name: video_image
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
-      m_GuidLow: 5676510705449033778
-      m_GuidHigh: 12508784086521354147
+      m_GuidLow: 4992414988466679776
+      m_GuidHigh: 3955212056295981986
     m_SerializedTextureGuid:
-      m_GuidLow: 18371356829654768104
-      m_GuidHigh: 10976734000120440568
+      m_GuidLow: 13976008507385248117
+      m_GuidHigh: 7518295395088821754
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
     m_Name: url_image
     m_Texture: {fileID: 0}
   - m_SerializedGuid:
-      m_GuidLow: 5672537227430942517
-      m_GuidHigh: 17591422323095719313
+      m_GuidLow: 4743287574495202251
+      m_GuidHigh: 17544338510396372625
     m_SerializedTextureGuid:
       m_GuidLow: 6828796448271894020
       m_GuidHigh: 9488162448070509960
     m_Size: {x: 0, y: 0}
     m_SpecifySize: 0
-    m_Name: rptu_image
+    m_Name: df_image
     m_Texture: {fileID: 0}

@@ -392,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dea56a9eaadd1c439095de4f9a371cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_SerializedLibrary: {fileID: 11400000, guid: c30c4145bf47c8c4581c2f7a67359003,
+  m_SerializedLibrary: {fileID: 11400000, guid: cad1d7c2e69542547a2474c657b5c636,
     type: 2}
   m_MaxNumberOfMovingImages: 4
   m_TrackedImagePrefab: {fileID: 0}
@@ -410,13 +410,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsToPlace:
     m_keys:
-    - video_image
     - url_image
-    - rptu_image
+    - df_image
+    - video_image
     m_values:
-    - {fileID: 8833983599952071938, guid: de04be44a61b7c042bdcde447afecfbe, type: 3}
-    - {fileID: 8422142047998156507, guid: 8c0e11495f1139840b1e734df9a19ef4, type: 3}
-    - {fileID: 8422142047998156507, guid: 92f5719fe67a00a4bbd052e2a8963499, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 8833983599952071938, guid: 0d38895fb78b0e04c8fa1e1a6f1c7976, type: 3}
 --- !u!1 &392013089
 GameObject:
   m_ObjectHideFlags: 0
